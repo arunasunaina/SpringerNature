@@ -8,7 +8,7 @@ namespace SpringerNature.TestData
 {
     public static class SearchKeyData
     {
-        public static string[,] searchKeyResult = new string[,]
+        public static string[,] searchKeyAndResult = new string[,]
 	    {
 	        {"Handbook of Vegetation Science", "Handbook of Vegetation Science"},
 	        {"journal of materials science", "Review papers in Journal of Materials Science"},

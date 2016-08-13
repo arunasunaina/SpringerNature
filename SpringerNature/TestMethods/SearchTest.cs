@@ -2,6 +2,7 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using SpringerNature.Framework.Helper;
 using SpringerNature.Framework;
+using SpringerNature.TestData;
 
 namespace SpringerNature.TestMethods
 {
@@ -14,13 +15,26 @@ namespace SpringerNature.TestMethods
         [TestMethod]
         public void VerifyTopSearchResult()
         {
-            HomeHelper homePage = new HomeHelper();
-            homePage.NavigateTo();
-            homePage.SearchFor("handbook");
-            SearchResultHelper searchResultPage = new SearchResultHelper();
-            searchResultPage.verifyTopSearchResult("handbook");
+            string[,] testData = SearchKeyData.searchKeyAndResult;
+            for (int i = 0; i <= testData.GetUpperBound(0); i++)
+            {
+                HomeHelper homePage = new HomeHelper();
+                homePage.NavigateTo();
+                homePage.SearchFor(testData[i,0]);
+                SearchResultHelper searchResultPage = new SearchResultHelper();
+                searchResultPage.verifyTopSearchResult(testData[i, 1]);
+            }
+            
         }
 
+        [TestInitialize()]
+        public void MyTestInitialize()
+        {
+            WebDriverManager.InitializeWebDriver();
+            WebDriverManager.GetDriver().Manage().Timeouts().ImplicitlyWait(TimeSpan.FromSeconds(20));
+            WebDriverManager.GetDriver().Manage().Window.Maximize();
+
+        }
         [TestCleanup()]
         public void MyTestCleanup()
         {
