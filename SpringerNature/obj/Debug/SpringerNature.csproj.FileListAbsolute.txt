@@ -1,0 +1,5 @@
+c:\users\vineet.kumar\documents\visual studio 2013\Projects\SpringerNature\SpringerNature\bin\Debug\SpringerNature.dll
+c:\users\vineet.kumar\documents\visual studio 2013\Projects\SpringerNature\SpringerNature\bin\Debug\SpringerNature.pdb
+c:\users\vineet.kumar\documents\visual studio 2013\Projects\SpringerNature\SpringerNature\obj\Debug\SpringerNature.csprojResolveAssemblyReference.cache
+c:\users\vineet.kumar\documents\visual studio 2013\Projects\SpringerNature\SpringerNature\obj\Debug\SpringerNature.dll
+c:\users\vineet.kumar\documents\visual studio 2013\Projects\SpringerNature\SpringerNature\obj\Debug\SpringerNature.pdb
